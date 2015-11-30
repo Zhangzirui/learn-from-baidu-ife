@@ -1,4 +1,5 @@
 # learn-from-baidu-ife
-看到百度ife中的spring与summer训练营，想跟着学习，让作为新手的自己每天进步
 
 
+
+  这是baidu-ife的原始地址：[百度前端技术学院](https://github.com/baidu-ife/ife)
