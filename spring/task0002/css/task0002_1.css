@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.alert{
+    color: red;
+    font-size: 12px;
+}
+#wrap{
+    margin: 20px 20px;
+}

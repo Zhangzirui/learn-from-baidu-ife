@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    width: 90%;
+    margin: 150px auto;
+}
+.require{
+    font:12px/1 arial;
+    color: red;
+}
+.button{
+    margin-top: 30px;
+    margin-left: 350px;
+}
+.show{
+    margin-top: 60px;
+    margin-left: 50px;
+}
