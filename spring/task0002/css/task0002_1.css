@@ -8,4 +8,12 @@
 }
 #wrap{
     margin: 20px 20px;
+<<<<<<< HEAD
+=======
+    box-sizing: border-box;
+}
+#wrap2 ol{
+    margin-left: 65px;
+    font: 16px/1.8em arial;
+>>>>>>> refs/remotes/origin/master
 }
