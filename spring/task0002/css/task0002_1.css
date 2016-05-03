@@ -10,6 +10,11 @@
     margin: 20px 20px;
     box-sizing: border-box;
 }
+#wrap2 h1{
+    margin-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.5);
+    font: bold 30px/1.8em arial;
+}
 #wrap2 ol{
     margin-left: 65px;
     font: 16px/1.8em arial;
