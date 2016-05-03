@@ -86,9 +86,12 @@ function countDown(){
     inputTimeArr.forEach(function(item,index,array){
         inputTimeArr[index] = parseInt(item,10);
     });
-    var futureDate = new Date(inputTimeArr[0],inputTimeArr[1]-1,inputTimeArr[2]);
-    setInterval(function(){
-        refreshTime(futureDate,inputTimeArr);
+    var futureDate = new Date(inputTimeArr[0],inputTimeArr[1]-1,inputTimeArr[2]),
+        timer = setInterval(function(){
+        var difference = refreshTime(futureDate,inputTimeArr);
+        if(difference < 0){
+            clearInterval(timer);
+        }
     },500);
 }
 function refreshTime(futureDate,inputTimeArr){
@@ -106,6 +109,7 @@ function refreshTime(futureDate,inputTimeArr){
         show.textContent = "距离" + inputTimeArr[0] + "年" + inputTimeArr[1] + "月" + inputTimeArr[2] + "日还有" + days + "天" + hours
         + "小时" + minutes + "分" + seconds + "秒";
     }
+    return difference;
 }
 function addEvent(element,event,listener){
     if(element.addEventListener){
