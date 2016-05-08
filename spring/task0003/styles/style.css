@@ -101,9 +101,6 @@ header{
     .main{
         overflow: hidden;
     }
-    .sub-left,.sub-mid,.content{
-        min-width: 300px;
-    }
 }
 
 
@@ -214,7 +211,6 @@ header h1{
     top: 120px;
     bottom: 0;
     right: 0;
-    min-width: 408px;
     padding: 18px 20px;
     box-sizing: border-box;
     background-color: #ffffff;
