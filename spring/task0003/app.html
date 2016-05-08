@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>GTD&nbsp;&nbsp;Tools</h1>
+    </header>
+    <div class="main clearfix">
+        <div class="sub-left min-w">
+            <div class="left-header"><i class="iconfont icon">&#xe62e;</i>所有任务</div>
+            <div class="left-list"><i class="iconfont icon">&#xe649;</i>分类列表</div>
+            <section class="folder-menu"><ul id="folders"></ul></section>
+            <div class="left-add"><i class="iconfont icon">&#xe613;</i>新增分类</div>
+        </div>
+        <div class="sub-mid min-w">
+            <ul class="mid-header">
+                <li class="hov">所有</li>
+                <li class="hov">未完成</li>
+                <li class="hov">已完成</li>
+            </ul>
+            <section class="file-menu"><ul id="files"></ul></section>
+            <div class="mid-add"><i class="iconfont icon">&#xe613;</i>新增任务</div>
+        </div>
+        <div class="content min-w">
+            <article>
+                <div class="article-header">
+                    <input type="text" placeholder="请输入标题" class="article-title" style="display: none;"/>
+                    <i class="article-none" style="display: inline;">无</i>
+                    <i class="iconfont hov modify">&#xe621;</i>
+                    <i class="iconfont hov save">&#xe688;</i>
+                </div>
+                <p class="article-date">
+                    <label for="date" >任务日期：</label>
+                    <input type="date" id="date" style="display: none;"/>
+                    <i class="article-none" style="display: inline;text-indent: 2em">无</i>
+                </p>
+                <div class="article-content">
+                    <textarea class="textarea-content" placeholder="请输入内容" disabled="disabled" style="background-color: #ffffff;"></textarea>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="cover">
+        <form class="popup-view">
+            <fieldset>
+                <legend>新增分类</legend>
+                <p>
+                    <label for="form-choose">选择主分类:</label>
+                    <select id="form-choose">
+                        <option value="新增主分类" selected="selected">新增主分类</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="form-name">新分类名称:</label>
+                    <input id="form-name" type="input"/>
+                </p>
+                <div class="button">
+                    <button type="reset" class="cancel">取消</button>
+                    <button type="button" class="confirm">确认</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function deal(){
+            var scaleWidth = window.innerWidth;
+            console.log(scaleWidth);
+            if(scaleWidth < 300){
+                scaleWidth = 300;
+                console.log("<300");
+            }
+            if(scaleWidth < 600){
+                for( var i=0;i<document.getElementsByClassName("min-w").length;i++){
+                    document.getElementsByClassName("min-w")[i].style.width = scaleWidth + "px";
+                    document.getElementsByClassName("min-w")[i].style.webkitTransform = "translate3d(" + i*scaleWidth + "px,0,0)";
+                }
+            }else{
+                for( var i=0;i<document.getElementsByClassName("min-w").length;i++){
+                    document.getElementsByClassName("min-w")[i].removeAttribute("style");
+                }
+            }
+        }
+        deal();
+        window.addEventListener("resize",deal,false);
+    </script>
+    <script type="text/javascript" data-main="src/main.js" src="src/require.js"></script>
+</body>
+</html>
